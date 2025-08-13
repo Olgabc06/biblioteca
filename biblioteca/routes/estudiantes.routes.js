@@ -1,4 +1,4 @@
-module.exports = app => {
+module.exports = biblioteca => {
   const estudiantes = require("../controllers/estudiantes.controller.js");
   const router = require("express").Router(); // usa el enrutador de Express
 
@@ -21,5 +21,5 @@ module.exports = app => {
   router.delete("/", estudiantes.deleteAll);
 
   // Ruta base para todas las rutas de estudiantes
-  app.use("/api/estudiantes", router);
+  biblioteca.use("/api/estudiantes", router);
 };
