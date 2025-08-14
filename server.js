@@ -5,7 +5,7 @@ const cors = require("cors");
 const biblioteca = express();
 
 var corsOptions = {
-    origin: "http://localhost:8082"
+    origin: "http://localhost:8083"
 };
 
 biblioteca.use(cors(corsOptions));
@@ -25,7 +25,7 @@ require("./biblioteca/routes/prestamos.routes.js")(biblioteca);
 require("./biblioteca/routes/estudiantes.routes.js")(biblioteca);
 require("./biblioteca/routes/libro.routes.js")(biblioteca);
 
-const PORT = process.env.PORT || 8082;
+const PORT = process.env.PORT || 8083;
 biblioteca.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}.`);
 }); 
